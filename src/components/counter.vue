@@ -1,15 +1,20 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    
+  <div class="counter">
+    <h1>Counter</h1>
+    <h1>{{ counter }}</h1>
+    <button @click="counter +=1">Add</button> <button @click ="counter -=1">Subtract</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Counter',
   props: {
-    msg: String
+  },
+  data(){
+    return{
+        counter: 0
+        }
   }
 }
 </script>
